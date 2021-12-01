@@ -73,8 +73,8 @@ UNGRADED_SUBMITFILE = ungraded.tar.gz
 PERF_FILE = perf.data*
 
 #Default Flags (we prefer -std=c++17 but Mac/Xcode/Clang doesn't support)
-CXXFLAGS = -std=c++1z -Wconversion -Wall -Werror -Wextra -pedantic 
-
+CXXFLAGS = -std=c++1z -Wconversion -Wall -Wextra -pedantic
+# -Werror
 # make release - will compile "all" with $(CXXFLAGS) and the -O3 flag
 #                also defines NDEBUG so that asserts will not check
 release: CXXFLAGS += -O3 -DNDEBUG
@@ -296,7 +296,7 @@ help:
 # % g++ -std=c++1z -MM *.cpp
 #
 # ADD YOUR OWN DEPENDENCIES HERE
-zoo: partA.cpp partA.hpp
+zoo: partA.cpp partA.hpp partB.hpp partB.cpp
 
 ######################
 # TODO (end) #

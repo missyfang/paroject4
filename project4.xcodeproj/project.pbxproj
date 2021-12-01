@@ -24,6 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A908C1182755663C00FE6113 /* test-2-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-2-MST.txt"; sourceTree = "<group>"; };
+		A908C1192755666B00FE6113 /* test-3-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-3-MST.txt"; sourceTree = "<group>"; };
+		A908C11A275568BF00FE6113 /* partB.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = partB.cpp; sourceTree = "<group>"; };
+		A908C11B275568BF00FE6113 /* partB.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = partB.hpp; sourceTree = "<group>"; };
 		A92EEDD8274EA4E6002DE7AA /* test-1-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-1-MST.txt"; sourceTree = "<group>"; };
 		A99F19F1274C542900824BAD /* project4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = project4; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99F19F4274C542900824BAD /* zoo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = zoo.cpp; sourceTree = "<group>"; };
@@ -69,10 +73,14 @@
 		A99F19E8274C542900824BAD = {
 			isa = PBXGroup;
 			children = (
-				A92EEDD8274EA4E6002DE7AA /* test-1-MST.txt */,
+				A908C11A275568BF00FE6113 /* partB.cpp */,
+				A908C11B275568BF00FE6113 /* partB.hpp */,
 				A99F19FB274C5B6700824BAD /* partA.cpp */,
 				A99F19FC274C5B6700824BAD /* partA.hpp */,
 				A99F19F4274C542900824BAD /* zoo.cpp */,
+				A92EEDD8274EA4E6002DE7AA /* test-1-MST.txt */,
+				A908C1182755663C00FE6113 /* test-2-MST.txt */,
+				A908C1192755666B00FE6113 /* test-3-MST.txt */,
 				A99F1A15274C628F00824BAD /* Makefile */,
 				A99F1A17274C629600824BAD /* xcode_redirect.hpp */,
 				A99F19FE274C5B7C00824BAD /* genPerms.txt */,

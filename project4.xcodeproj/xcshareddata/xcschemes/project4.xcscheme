@@ -54,15 +54,15 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-m MST &lt; spec-test.txt "
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-m MST &lt; test-1-MST.txt"
+            argument = "-m MST &lt; test-2-MST.txt"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-m MST &lt; sample-ab.txt"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-m MST &lt; sample-c.txt"

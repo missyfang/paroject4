@@ -10,6 +10,7 @@
 #include <string>
 #include "xcode_redirect.hpp"
 #include "partA.hpp"
+//#include "partB.hpp"
 #include <iomanip>
 using namespace std;
 
@@ -24,11 +25,20 @@ int main(int argc,  char * argv[]) {
     string mode = getMode(argc, argv);
     // will always have to read in, always have to create cages. 
     if (mode == "MST"){
+
         A a;
         a.readA();
-        cout << a.primsAlg() << "\n";
-        sort(a.tree.begin(), a.tree.end());
-        for (int i = 0; i < a.tree.size(); i++){
+        double sum = a.primsAlg();
+        if (sum == 0){
+            cerr << "Cannot construct MST";
+            exit(1);
+        }
+        cout << sum << "\n";
+        //sort(a.tree.begin(), a.tree.end());
+        for (size_t i = 0; i < a.tree.size(); i++){
+            cout << a.prim_table[i]->pred << " " << i << "\n";
+        } //for
+        for (size_t i = 0; i < a.tree.size(); i++){
         cout << a.tree[i].first << " " << a.tree[i].second << "\n";
         } //for
     } // if
@@ -67,49 +77,4 @@ string getMode(int argc, char * argv[]){
 }
 
 
-/*
- 
-// mem vars
- vector
- // will i want this struct in all parts?
- struct coors k v d
- decault false inf
- // how to make part A templeted
- // print nodes that are made perm
-// adjlist 
- 
- 
-// distance function
- safe <-> wild is inf
- else find dis
- int coors to doubles
- do i want them all to remain a double or just for dis calc
- 
- //euclidians
- // does this take care over overflow
- double x
- double y
-return sqrt( y2 + x2 )
- 
- 
- 
- //prims
- loop
- put all into prim will never pick inf
- 
- // comparator
- cares about wild <-> safe and one that doesnt.
- always calcualte the distance since will use in part c alot or depend on?
- will this cause me to go over time in part A? 
- 
- // struct node
-  wild or safe or boarder (char)
-  coors
-  visited?
- 
- // will I need the adjlsit in call parts? use swap or copy or something.
- // put struct in main??
- // how will A work with C?
-    copy C remianing nodes to A vector and call prims?
-    do i want to a return it inorder?
- */
+// i think need to go thru and delete after? 
