@@ -10,7 +10,7 @@
 #include <string>
 #include "xcode_redirect.hpp"
 #include "partA.hpp"
-//#include "partB.hpp"
+#include "partB.hpp"
 #include <iomanip>
 using namespace std;
 
@@ -34,14 +34,20 @@ int main(int argc,  char * argv[]) {
             exit(1);
         }
         cout << sum << "\n";
-        //sort(a.tree.begin(), a.tree.end());
-        for (size_t i = 0; i < a.tree.size(); i++){
-            cout << a.prim_table[i]->pred << " " << i << "\n";
-        } //for
         for (size_t i = 0; i < a.tree.size(); i++){
         cout << a.tree[i].first << " " << a.tree[i].second << "\n";
         } //for
     } // if
+    
+    if (mode == "FASTTSP"){
+        B b;
+        b.readB();
+        double sum = b.randomInsert();
+        cout << sum << "\n";
+        for (int i = 0 ; i < b.path.size() ; i++){
+            cout << b.path[i] << " ";
+        }
+    }
     return 0;
 }
 

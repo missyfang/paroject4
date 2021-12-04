@@ -4,7 +4,6 @@
 //
 //  Created by Missy Fang  on 11/29/21.
 //
-
 #ifndef partB_hpp
 #define partB_hpp
 
@@ -25,16 +24,13 @@ using namespace std;
 struct node{
     int x;
     int y;
-    bool discovered = false;
-    // index of pred node
-    int pred;
 };
 
 class B {
-    // node or node* ??
+public:
     int total;
-    vector<node*> grid;
-    vector<node*> cycle;
+    vector<node> grid;
+    vector<int> path;
     void readB(); 
     double randomInsert();
     double distance(int x, int y); 
@@ -42,52 +38,50 @@ class B {
 
 double B::randomInsert(){
     double sum = 0;
-    // connect first 3 nodes
-    // assumes size >= 3
-    double dist = distance(1, 2);
-    grid[2]->pred = 1;
-    sum += dist;
-    dist = distance(2, 3);
-    grid[3]->pred = 2;
-    sum += dist;
-    dist = distance(3, 1);
-    grid[1]->pred = 3;
-    sum += dist;
-    // while node all nodes in cycle, maybe total + 1;
-    while (cycle.size() != total){
-        // find random node idk how to do this efficently.
-        // idk this errors
-      //  int rand = rand() % total;
-        // just 
-        if (grid[rand]->discovered == false){
-            grid[rand]->discovered = true;
-            // find nearest node;
-            double min = numeric_limits<double>::infinity();
-            int min_index;
-            for (int i = 0; i < cycle.size() ; i++){
-                double dist = distance(i, rand);
-                if (dist < min){
-                    min = dist;
-                    min_index = i;
-                } // if
-            } // for
-            // insert between and fix sum 
-            sum =- distance(min_index,grid[min_index]->pred);
-            int temp = grid[min_index]->pred;
-            grid[min_index]->pred = rand;
-            grid[rand]->pred = temp;
-            sum += distance(temp,rand);
-            sum += distance(rand,min_index);
-        } // if
-    } // while
+    sum = distance(0,1) + distance(1,2) + distance(2,0);
+    path.push_back(0);
+    path.push_back(1);
+    path.push_back(2);
     
+    int rand = 3;
+    while (rand < grid.size()){
+        double min = numeric_limits<double>::infinity();
+        int min_pred = 0;
+        double dist;
+        for (int i = 0; i < path.size(); i++){
+            //wrap around;
+            if (i == (path.size() - 1)){
+                dist = distance(rand,path[i]) + distance(rand, path[0]) - distance(path[i],path[0]);
+            }
+            else{
+                dist = distance(rand,path[i]) + distance(rand, path[i+1]) - distance(path[i],path[i + 1]);
+            }
+            if (dist < min){
+                    min_pred = i;
+                    min = dist;
+            }
+        }
+        int new_index = min_pred + 1;
+        if (min_pred == (path.size() - 1)){
+            sum -= distance(path[0],path[min_pred]);
+            path.insert(path.begin() + new_index, rand);
+            sum += distance(path[new_index - 1],path[new_index]);
+            sum += distance(path[0],path[new_index]);
+        }
+        else {
+            sum -= distance(path[min_pred],path[min_pred+1]);
+            path.insert(path.begin() + new_index, rand);
+            sum += distance(path[new_index],path[new_index + 1]) + distance(path[new_index -1],path[new_index]);
+        }
+        rand++;
+    }
     return sum;
     
 }
 double B::distance(int j, int k){
     double dist = 0;
-    double x = static_cast<double>(grid[j]->x) - static_cast<double>(grid[k]->x);
-    double y =  static_cast<double>(grid[j]->y) - static_cast<double>(grid[k]->y);
+    double x = static_cast<double>(grid[j].x) - static_cast<double>(grid[k].x);
+    double y =  static_cast<double>(grid[j].y) - static_cast<double>(grid[k].y);
     dist = (x * x) + (y * y);
     return sqrt(dist);
 }
@@ -100,9 +94,9 @@ void B::readB(){
     int y;
     while (cin >> x){
         cin >> y;
-        node* c = new node;
-        c->x = x;
-        c->y = y;
+        struct node c;
+        c.x = x;
+        c.y = y;
         grid.push_back(c);
     }
 }

@@ -54,26 +54,30 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-m MST &lt; spec-test.txt "
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-m MST &lt; test-2-MST.txt"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-m MST &lt; sample-ab.txt"
+            argument = "-m FASTTSP &lt; sample-ab.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-m FASTTSP &lt; sample-c.txt"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-m MST &lt; sample-c.txt"
+            argument = "-m FASTTSP &lt; sample-d.txt"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-m MST &lt; sample-d.txt"
+            argument = "-m FASTTSP &lt; sample-e.txt"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-m MST &lt; sample-e.txt"
+            argument = "-m FASTTSP &lt; spec-test.txt"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
