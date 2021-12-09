@@ -9,9 +9,10 @@
 #include <getopt.h>
 #include <string>
 #include "xcode_redirect.hpp"
+#include <iomanip>
 #include "partA.hpp"
 #include "partB.hpp"
-#include <iomanip>
+#include "partC.hpp"
 using namespace std;
 
 string getMode(int argC, char * arg[]);
@@ -46,6 +47,23 @@ int main(int argc,  char * argv[]) {
         cout << sum << "\n";
         for (int i = 0 ; i < b.path.size() ; i++){
             cout << b.path[i] << " ";
+        }
+    }
+    
+    if (mode == "OPTTSP"){
+       // cerr << fixed << showpoint << setprecision(2);
+        C c;
+        c.readC();
+        c.partB();
+        vector<int> path;
+        for (int i = 0; i < c.grid.size(); i++){
+            path.push_back(i);
+        }
+        // idk if this is the correct way to call gen perms
+        c.genPerms(path, 1);
+        cout << c.best_cost << "\n";
+        for ( int i = 0; i < c.best_path.size(); i++){
+            cout << c.best_path[i] << " ";
         }
     }
     return 0;

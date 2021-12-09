@@ -296,7 +296,7 @@ help:
 # % g++ -std=c++1z -MM *.cpp
 #
 # ADD YOUR OWN DEPENDENCIES HERE
-zoo: partA.cpp partA.hpp partB.hpp partB.cpp
+zoo: partA.hpp partB.hpp partC.hpp
 
 ######################
 # TODO (end) #

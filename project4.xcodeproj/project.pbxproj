@@ -26,12 +26,16 @@
 /* Begin PBXFileReference section */
 		A908C1182755663C00FE6113 /* test-2-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-2-MST.txt"; sourceTree = "<group>"; };
 		A908C1192755666B00FE6113 /* test-3-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-3-MST.txt"; sourceTree = "<group>"; };
-		A908C11A275568BF00FE6113 /* partB.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = partB.cpp; sourceTree = "<group>"; };
 		A908C11B275568BF00FE6113 /* partB.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = partB.hpp; sourceTree = "<group>"; };
+		A90D12762762A74B003D195B /* test-7-OPTTSP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-7-OPTTSP.txt"; sourceTree = "<group>"; };
+		A90D12772762A796003D195B /* test-8-FASTTSP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-8-FASTTSP.txt"; sourceTree = "<group>"; };
+		A90D12782762A7CF003D195B /* test-9-FASTTSP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-9-FASTTSP.txt"; sourceTree = "<group>"; };
+		A90D12792762A82E003D195B /* test-10-OPTTSP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-10-OPTTSP.txt"; sourceTree = "<group>"; };
 		A92EEDD8274EA4E6002DE7AA /* test-1-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-1-MST.txt"; sourceTree = "<group>"; };
+		A934DCC4275EC26D006CC65D /* test-4-OPTTSP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-4-OPTTSP.txt"; sourceTree = "<group>"; };
+		A934DCC5275EC2D7006CC65D /* test-5-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-5-MST.txt"; sourceTree = "<group>"; };
 		A99F19F1274C542900824BAD /* project4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = project4; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99F19F4274C542900824BAD /* zoo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = zoo.cpp; sourceTree = "<group>"; };
-		A99F19FB274C5B6700824BAD /* partA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = partA.cpp; sourceTree = "<group>"; };
 		A99F19FC274C5B6700824BAD /* partA.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = partA.hpp; sourceTree = "<group>"; };
 		A99F19FE274C5B7C00824BAD /* genPerms.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = genPerms.txt; sourceTree = "<group>"; };
 		A99F1A00274C5BB700824BAD /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		A99F1A14274C5BB800824BAD /* sample-d-MST-out.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sample-d-MST-out.txt"; sourceTree = "<group>"; };
 		A99F1A15274C628F00824BAD /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		A99F1A17274C629600824BAD /* xcode_redirect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xcode_redirect.hpp; sourceTree = "<group>"; };
+		A9B6B574275D45D300056828 /* partC.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = partC.hpp; sourceTree = "<group>"; };
+		A9CE9369276195A0000B087B /* test-6-MST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-6-MST.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,14 +79,20 @@
 		A99F19E8274C542900824BAD = {
 			isa = PBXGroup;
 			children = (
-				A908C11A275568BF00FE6113 /* partB.cpp */,
+				A9B6B574275D45D300056828 /* partC.hpp */,
 				A908C11B275568BF00FE6113 /* partB.hpp */,
-				A99F19FB274C5B6700824BAD /* partA.cpp */,
 				A99F19FC274C5B6700824BAD /* partA.hpp */,
 				A99F19F4274C542900824BAD /* zoo.cpp */,
-				A92EEDD8274EA4E6002DE7AA /* test-1-MST.txt */,
-				A908C1182755663C00FE6113 /* test-2-MST.txt */,
+				A90D12792762A82E003D195B /* test-10-OPTTSP.txt */,
+				A90D12782762A7CF003D195B /* test-9-FASTTSP.txt */,
+				A90D12772762A796003D195B /* test-8-FASTTSP.txt */,
+				A90D12762762A74B003D195B /* test-7-OPTTSP.txt */,
+				A9CE9369276195A0000B087B /* test-6-MST.txt */,
+				A934DCC5275EC2D7006CC65D /* test-5-MST.txt */,
+				A934DCC4275EC26D006CC65D /* test-4-OPTTSP.txt */,
 				A908C1192755666B00FE6113 /* test-3-MST.txt */,
+				A908C1182755663C00FE6113 /* test-2-MST.txt */,
+				A92EEDD8274EA4E6002DE7AA /* test-1-MST.txt */,
 				A99F1A15274C628F00824BAD /* Makefile */,
 				A99F1A17274C629600824BAD /* xcode_redirect.hpp */,
 				A99F19FE274C5B7C00824BAD /* genPerms.txt */,
